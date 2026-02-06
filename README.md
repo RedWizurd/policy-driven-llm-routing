@@ -26,6 +26,13 @@ python3 validate_routing_policy.py routing_policy.json
 python3 router.py --mode researcher --input "Summarize latest status"
 ```
 
+## Usage
+```bash
+make setup
+make check
+make run
+```
+
 ## Roadmap
 - Add schema versioning and migration tooling for policy files.
 - Add weighted provider scoring based on task type.
