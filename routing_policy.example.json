@@ -1,0 +1,19 @@
+{
+  "modes": {
+    "chat": {
+      "providers": ["ollama", "llama_cpp"],
+      "jury": {"enabled": false},
+      "swarm": {"pattern": "parallel", "max_agents": 2}
+    },
+    "builder": {
+      "providers": ["ollama", "openai"],
+      "jury": {"enabled": true, "models": ["qwen2.5:7b", "mixtral:8x7b"], "min_agreement": 0.66},
+      "swarm": {"pattern": "tree", "max_agents": 3}
+    },
+    "researcher": {
+      "providers": ["llama_cpp", "deepseek"],
+      "jury": {"enabled": true, "models": ["mixtral:8x7b", "qwen2.5:7b"], "min_agreement": 0.5},
+      "swarm": {"pattern": "parallel", "max_agents": 4}
+    }
+  }
+}
